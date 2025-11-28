@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - ThePrimeagen</title>
+    <meta name="description" content="ThePrimeagen's technical skills and expertise in programming languages, tools, and performance optimization.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Core Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <!-- Particles.js Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Custom cursor effects -->
+    <div class="cursor-glow" id="cursor-glow"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-trail" id="trail-1"></div>
+    <div class="cursor-trail" id="trail-2"></div>
+    <div class="cursor-trail" id="trail-3"></div>
+    <div class="cursor-trail" id="trail-4"></div>
+    <div class="cursor-trail" id="trail-5"></div>
+    
+    <!-- Skip to main content -->
+    <a href="#skills" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-green-400 focus:text-black focus:rounded-lg focus:font-semibold">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="font-mono text-xl font-bold text-green-400">ThePrimeagen</a>
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-400 hover:text-green-400 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-lg p-2" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+            
+            <!-- Desktop navigation -->
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="nav-link focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Home</a>
+                <a href="about.html" class="nav-link focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded">About</a>
+                <a href="skills.html" class="nav-link active focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Skills</a>
+                <a href="projects.html" class="nav-link focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Projects</a>
+                <a href="contact.html" class="nav-link focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Contact</a>
+            </div>
+        </div>
+        
+        <!-- Mobile navigation menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-lg border-t border-green-400/20">
+            <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+                <a href="index.html" class="nav-link py-2 focus:outline-none focus:ring-2 focus:ring-green-400 rounded">Home</a>
+                <a href="about.html" class="nav-link py-2 focus:outline-none focus:ring-2 focus:ring-green-400 rounded">About</a>
+                <a href="skills.html" class="nav-link active py-2 focus:outline-none focus:ring-2 focus:ring-green-400 rounded">Skills</a>
+                <a href="projects.html" class="nav-link py-2 focus:outline-none focus:ring-2 focus:ring-green-400 rounded">Projects</a>
+                <a href="contact.html" class="nav-link py-2 focus:outline-none focus:ring-2 focus:ring-green-400 rounded">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="content-wrapper">
+        <!-- Skills Section -->
+        <section id="skills" class="section min-h-screen">
+            <div class="container mx-auto px-6">
+                <!-- Section Header -->
+                <div class="mb-12 fade-in">
+                    <p class="skills-section-title">02. Skills & Technologies</p>
+                    <h2 class="skills-heading">
+                        What I <span>Work With</span>
+                    </h2>
+                </div>
+                
+                <!-- Skills Grid -->
+                <div class="skills-grid">
+                    <!-- Languages Card -->
+                    <div class="skill-card fade-in">
+                        <div class="skill-card-header">
+                            <svg class="skill-card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                            </svg>
+                            <h3 class="skill-card-title">Languages</h3>
+                        </div>
+                        <div class="skill-card-tags">
+                            <span class="skill-pill">Rust</span>
+                            <span class="skill-pill">C++</span>
+                            <span class="skill-pill">TypeScript</span>
+                            <span class="skill-pill">Lua</span>
+                            <span class="skill-pill">Python</span>
+                            <span class="skill-pill">Zig</span>
+                            <span class="skill-pill">OCaml</span>
+                            <span class="skill-pill">Go</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Tools & Frameworks Card -->
+                    <div class="skill-card fade-in">
+                        <div class="skill-card-header">
+                            <svg class="skill-card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            <h3 class="skill-card-title">Tools & Frameworks</h3>
+                        </div>
+                        <div class="skill-card-tags">
+                            <span class="skill-pill">NeoVim</span>
+                            <span class="skill-pill">Git</span>
+                            <span class="skill-pill">Docker</span>
+                            <span class="skill-pill">Kubernetes</span>
+                            <span class="skill-pill">HTTP/2</span>
+                            <span class="skill-pill">WebAssembly</span>
+                            <span class="skill-pill">Redis</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Performance Card -->
+                    <div class="skill-card fade-in">
+                        <div class="skill-card-header">
+                            <svg class="skill-card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                            <h3 class="skill-card-title">Performance</h3>
+                        </div>
+                        <div class="skill-card-tags">
+                            <span class="skill-pill">System Design</span>
+                            <span class="skill-pill">Profiling</span>
+                            <span class="skill-pill">Optimization</span>
+                            <span class="skill-pill">Benchmarking</span>
+                            <span class="skill-pill">Memory Mgmt</span>
+                            <span class="skill-pill">CPU Caching</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Teaching Card (Full Width) -->
+                    <div class="skill-card full-width fade-in">
+                        <div class="skill-card-header">
+                            <svg class="skill-card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                            <h3 class="skill-card-title">Teaching</h3>
+                        </div>
+                        <div class="skill-card-tags">
+                            <span class="skill-pill">Live Streaming</span>
+                            <span class="skill-pill">Course Creation</span>
+                            <span class="skill-pill">Technical Writing</span>
+                            <span class="skill-pill">Public Speaking</span>
+                            <span class="skill-pill">Mentoring</span>
+                            <span class="skill-pill">Content Creation</span>
+                            <span class="skill-pill">Community Building</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-black py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">© 2024 ThePrimeagen. Built with performance in mind.</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

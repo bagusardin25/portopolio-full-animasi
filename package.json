@@ -1,0 +1,57 @@
+{
+  "name": "theprimeagen-portfolio",
+  "version": "1.0.0",
+  "description": "A modern, performance-focused portfolio website for ThePrimeagen",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "python -m http.server 8000",
+    "dev": "python -m http.server 8000",
+    "build": "echo 'No build process required - static site'",
+    "test": "echo 'No tests specified'"
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "performance",
+    "neovim",
+    "rust",
+    "typescript",
+    "responsive",
+    "animations",
+    "modern",
+    "dark-theme"
+  ],
+  "author": "ThePrimeagen (Michael Paulson)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theprimeagen/portfolio"
+  },
+  "homepage": "https://theprimeagen.com",
+  "bugs": {
+    "url": "https://github.com/theprimeagen/portfolio/issues"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "dependencies": {
+    "vanta": "^0.5.24",
+    "three": "^0.128.0",
+    "typed.js": "^2.0.12",
+    "gsap": "^3.12.2",
+    "tailwindcss": "^3.3.0"
+  },
+  "devDependencies": {},
+  "files": [
+    "index.html",
+    "main.js",
+    "README.md",
+    "resources/"
+  ]
+}

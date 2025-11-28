@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - ThePrimeagen</title>
+    <meta name="description" content="Featured projects by ThePrimeagen including Harpoon, Deez Interpreter, and more open source work.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Core Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <!-- Particles.js Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Custom cursor effects -->
+    <div class="cursor-glow" id="cursor-glow"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-trail" id="trail-1"></div>
+    <div class="cursor-trail" id="trail-2"></div>
+    <div class="cursor-trail" id="trail-3"></div>
+    <div class="cursor-trail" id="trail-4"></div>
+    <div class="cursor-trail" id="trail-5"></div>
+    
+    <!-- Skip to main content -->
+    <a href="#projects" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-green-400 focus:text-black focus:rounded-lg focus:font-semibold">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="font-mono text-xl font-bold text-green-400">ThePrimeagen</a>
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-400 hover:text-green-400 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-lg p-2" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+            
+            <!-- Desktop navigation -->
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="nav-link focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Home</a>
+                <a href="about.html" class="nav-link focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded">About</a>
+                <a href="skills.html" class="nav-link focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Skills</a>
+                <a href="projects.html" class="nav-link active focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Projects</a>
+                <a href="contact.html" class="nav-link focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Contact</a>
+            </div>
+        </div>
+        
+        <!-- Mobile navigation menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-lg border-t border-green-400/20">
+            <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+                <a href="index.html" class="nav-link py-2 focus:outline-none focus:ring-2 focus:ring-green-400 rounded">Home</a>
+                <a href="about.html" class="nav-link py-2 focus:outline-none focus:ring-2 focus:ring-green-400 rounded">About</a>
+                <a href="skills.html" class="nav-link py-2 focus:outline-none focus:ring-2 focus:ring-green-400 rounded">Skills</a>
+                <a href="projects.html" class="nav-link active py-2 focus:outline-none focus:ring-2 focus:ring-green-400 rounded">Projects</a>
+                <a href="contact.html" class="nav-link py-2 focus:outline-none focus:ring-2 focus:ring-green-400 rounded">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="content-wrapper">
+        <!-- Projects Section -->
+        <section id="projects" class="section min-h-screen">
+            <div class="container mx-auto px-6">
+                <!-- Section Header -->
+                <div class="mb-12 fade-in">
+                    <p class="projects-section-title">03. Featured Projects</p>
+                    <h2 class="projects-heading">
+                        Things I've <span>Built</span>
+                    </h2>
+                </div>
+                
+                <!-- Projects Grid -->
+                <div class="projects-grid">
+                    <!-- Harpoon -->
+                    <div class="project-card-v2 fade-in">
+                        <div class="project-card-header">
+                            <!-- Folder Icon -->
+                            <svg class="project-folder-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
+                            </svg>
+                            <!-- Action Icons -->
+                            <div class="project-links">
+                                <a href="https://github.com/ThePrimeagen/harpoon" target="_blank" rel="noopener noreferrer" title="GitHub">
+                                    <svg class="project-link-icon" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" target="_blank" rel="noopener noreferrer" title="External Link">
+                                    <svg class="project-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-card-title">Harpoon</h3>
+                        <p class="project-card-description">
+                            A NeoVim plugin for lightning-fast file navigation. Navigate to any file in your project 
+                            with just a few keystrokes, designed for developers who demand speed.
+                        </p>
+                        <div class="project-card-tags">
+                            <span class="project-tag">Lua</span>
+                            <span class="project-tag">NeoVim</span>
+                            <span class="project-tag">Plugin</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Deez Interpreter -->
+                    <div class="project-card-v2 fade-in">
+                        <div class="project-card-header">
+                            <svg class="project-folder-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
+                            </svg>
+                            <div class="project-links">
+                                <a href="https://github.com/ThePrimeagen" target="_blank" rel="noopener noreferrer" title="GitHub">
+                                    <svg class="project-link-icon" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" target="_blank" rel="noopener noreferrer" title="External Link">
+                                    <svg class="project-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-card-title">Deez Interpreter</h3>
+                        <p class="project-card-description">
+                            A programming language interpreter implemented in TypeScript, Rust, and Zig. 
+                            Educational project demonstrating language design and compiler construction.
+                        </p>
+                        <div class="project-card-tags">
+                            <span class="project-tag">TypeScript</span>
+                            <span class="project-tag">Rust</span>
+                            <span class="project-tag">Zig</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Vim With Me -->
+                    <div class="project-card-v2 fade-in">
+                        <div class="project-card-header">
+                            <svg class="project-folder-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
+                            </svg>
+                            <div class="project-links">
+                                <a href="https://github.com/ThePrimeagen" target="_blank" rel="noopener noreferrer" title="GitHub">
+                                    <svg class="project-link-icon" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" target="_blank" rel="noopener noreferrer" title="External Link">
+                                    <svg class="project-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-card-title">Vim With Me</h3>
+                        <p class="project-card-description">
+                            A streaming overlay system for live coding sessions. Real-time code sharing, 
+                            audience interaction, and performance metrics for educational content.
+                        </p>
+                        <div class="project-card-tags">
+                            <span class="project-tag">Go</span>
+                            <span class="project-tag">WebSocket</span>
+                            <span class="project-tag">React</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Left-Pad Performance -->
+                    <div class="project-card-v2 fade-in">
+                        <div class="project-card-header">
+                            <svg class="project-folder-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
+                            </svg>
+                            <div class="project-links">
+                                <a href="https://github.com/ThePrimeagen" target="_blank" rel="noopener noreferrer" title="GitHub">
+                                    <svg class="project-link-icon" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" target="_blank" rel="noopener noreferrer" title="External Link">
+                                    <svg class="project-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-card-title">Left-Pad Performance</h3>
+                        <p class="project-card-description">
+                            A comprehensive benchmarking suite comparing left-pad implementations across 
+                            different languages and optimization techniques. Because performance matters.
+                        </p>
+                        <div class="project-card-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Benchmark</span>
+                            <span class="project-tag">Performance</span>
+                        </div>
+                    </div>
+                    
+                    <!-- TSM -->
+                    <div class="project-card-v2 fade-in">
+                        <div class="project-card-header">
+                            <svg class="project-folder-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
+                            </svg>
+                            <div class="project-links">
+                                <a href="https://github.com/ThePrimeagen" target="_blank" rel="noopener noreferrer" title="GitHub">
+                                    <svg class="project-link-icon" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" target="_blank" rel="noopener noreferrer" title="External Link">
+                                    <svg class="project-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-card-title">TSM - Terminal Session Manager</h3>
+                        <p class="project-card-description">
+                            A terminal session manager for managing multiple terminal sessions efficiently. 
+                            Save, restore, and switch between complex terminal layouts with ease.
+                        </p>
+                        <div class="project-card-tags">
+                            <span class="project-tag">Rust</span>
+                            <span class="project-tag">Terminal</span>
+                            <span class="project-tag">CLI</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Refactoring.nvim -->
+                    <div class="project-card-v2 fade-in">
+                        <div class="project-card-header">
+                            <svg class="project-folder-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
+                            </svg>
+                            <div class="project-links">
+                                <a href="https://github.com/ThePrimeagen/refactoring.nvim" target="_blank" rel="noopener noreferrer" title="GitHub">
+                                    <svg class="project-link-icon" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" target="_blank" rel="noopener noreferrer" title="External Link">
+                                    <svg class="project-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-card-title">Refactoring.nvim</h3>
+                        <p class="project-card-description">
+                            The Refactoring library based off the Refactoring book by Martin Fowler. 
+                            Powerful code refactoring tools for NeoVim with TreeSitter support.
+                        </p>
+                        <div class="project-card-tags">
+                            <span class="project-tag">Lua</span>
+                            <span class="project-tag">NeoVim</span>
+                            <span class="project-tag">TreeSitter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-black py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">© 2024 ThePrimeagen. Built with performance in mind.</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
