@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bagus Ardin - Performance Engineer & Developer Advocate</title>
-    <meta name="description" content="Michael 'ThePrimeagen' Paulson - Ex-Netflix Performance Engineer, NeoVim Ricer, Git Rebaser, Backend Developer">
-    
+    <meta name="description"
+        content="Michael 'ThePrimeagen' Paulson - Ex-Netflix Performance Engineer, NeoVim Ricer, Git Rebaser, Backend Developer">
+
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- External Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
-    
+
     <!-- Core Libraries -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
+
 <body>
     <!-- Particles.js Background -->
     <div id="particles-js"></div>
-    
+
     <!-- Custom cursor effects -->
     <div class="cursor-glow" id="cursor-glow"></div>
     <div class="cursor-ring" id="cursor-ring"></div>
@@ -31,44 +36,72 @@
     <div class="cursor-trail" id="trail-3"></div>
     <div class="cursor-trail" id="trail-4"></div>
     <div class="cursor-trail" id="trail-5"></div>
-    
+
     <!-- Skip to main content -->
-    <a href="#home" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-green-400 focus:text-black focus:rounded-lg focus:font-semibold">Skip to main content</a>
-    
+    <a href="#home"
+        class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-green-400 focus:text-black focus:rounded-lg focus:font-semibold">Skip
+        to main content</a>
+
     <!-- Navigation -->
     <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <a href="#home" class="font-mono text-xl font-bold text-green-400">BagusAP</a>
-            
-            <!-- Mobile menu button -->
-            <button id="mobile-menu-btn" class="md:hidden text-gray-400 hover:text-green-400 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-lg p-2" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+
+            <!-- Theme Toggle -->
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+                <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+                <svg class="moon-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                 </svg>
             </button>
-            
+
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-btn"
+                class="md:hidden text-gray-400 hover:text-green-400 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-lg p-2"
+                aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
             <!-- Desktop navigation -->
             <div class="hidden md:flex space-x-6">
-                <a href="#home" class="nav-link focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Home</a>
-                <a href="#about" class="nav-link focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded">About</a>
-                <a href="#skills" class="nav-link focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Skills</a>
-                <a href="#projects" class="nav-link focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Projects</a>
-                <a href="#contact" class="nav-link focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Contact</a>
+                <a href="#home"
+                    class="nav-link focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Home</a>
+                <a href="#about"
+                    class="nav-link focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded">About</a>
+                <a href="#skills"
+                    class="nav-link focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Skills</a>
+                <a href="#projects"
+                    class="nav-link focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Projects</a>
+                <a href="#contact"
+                    class="nav-link focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Contact</a>
             </div>
         </div>
-        
+
         <!-- Mobile navigation menu -->
-        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-lg border-t border-green-400/20">
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-lg border-t border-green-400/20">
             <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
-                <a href="#home" class="nav-link py-2 focus:outline-none focus:ring-2 focus:ring-green-400 rounded">Home</a>
-                <a href="#about" class="nav-link py-2 focus:outline-none focus:ring-2 focus:ring-green-400 rounded">About</a>
-                <a href="#skills" class="nav-link py-2 focus:outline-none focus:ring-2 focus:ring-green-400 rounded">Skills</a>
-                <a href="#projects" class="nav-link py-2 focus:outline-none focus:ring-2 focus:ring-green-400 rounded">Projects</a>
-                <a href="#contact" class="nav-link py-2 focus:outline-none focus:ring-2 focus:ring-green-400 rounded">Contact</a>
+                <a href="#home"
+                    class="nav-link py-2 focus:outline-none focus:ring-2 focus:ring-green-400 rounded">Home</a>
+                <a href="#about"
+                    class="nav-link py-2 focus:outline-none focus:ring-2 focus:ring-green-400 rounded">About</a>
+                <a href="#skills"
+                    class="nav-link py-2 focus:outline-none focus:ring-2 focus:ring-green-400 rounded">Skills</a>
+                <a href="#projects"
+                    class="nav-link py-2 focus:outline-none focus:ring-2 focus:ring-green-400 rounded">Projects</a>
+                <a href="#contact"
+                    class="nav-link py-2 focus:outline-none focus:ring-2 focus:ring-green-400 rounded">Contact</a>
             </div>
         </div>
     </nav>
-    
+
     <div class="content-wrapper">
         <!-- Hero Section -->
         <section id="home" class="hero-section">
@@ -84,24 +117,42 @@
                         </div>
                         <div class="flex flex-col sm:flex-row gap-4">
                             <a href="#contact" class="cta-button">Get In Touch</a>
-                            <a href="#projects" class="border border-green-400 text-green-400 px-6 py-3 rounded-lg text-center hover:bg-green-400 hover:text-black transition-all duration-300">View Projects</a>
+                            <a href="#projects"
+                                class="border border-green-400 text-green-400 px-6 py-3 rounded-lg text-center hover:bg-green-400 hover:text-black transition-all duration-300">View
+                                Projects</a>
+                            <a href="#"
+                                class="resume-btn border border-blue-400 text-blue-400 px-6 py-3 rounded-lg text-center hover:bg-blue-400 hover:text-black transition-all duration-300"
+                                download>
+                                <svg class="inline w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>Resume
+                            </a>
                         </div>
                     </div>
-                    
+
                     <div class="fade-in">
                         <div class="code-block">
                             <div class="text-gray-500 mb-2">~/.config/nvim/init.lua</div>
-                            <div class="text-green-400">local <span class="text-blue-400">harpoon</span> = <span class="text-yellow-400">require</span>(<span class="text-orange-400">'harpoon'</span>)</div>
-                            <div class="text-green-400">local <span class="text-blue-400">remap</span> = <span class="text-yellow-400">require</span>(<span class="text-orange-400">'theprimeagen.remap'</span>)</div>
+                            <div class="text-green-400">local <span class="text-blue-400">harpoon</span> = <span
+                                    class="text-yellow-400">require</span>(<span
+                                    class="text-orange-400">'harpoon'</span>)</div>
+                            <div class="text-green-400">local <span class="text-blue-400">remap</span> = <span
+                                    class="text-yellow-400">require</span>(<span
+                                    class="text-orange-400">'theprimeagen.remap'</span>)</div>
                             <div class="text-gray-500 mt-3">-- Performance optimization for large files</div>
-                            <div class="text-green-400">vim<span class="text-blue-400">.opt</span><span class="text-yellow-400">.lazyredraw</span> = <span class="text-purple-400">true</span></div>
-                            <div class="text-green-400">vim<span class="text-blue-400">.opt</span><span class="text-yellow-400">.relativenumber</span> = <span class="text-purple-400">true</span></div>
+                            <div class="text-green-400">vim<span class="text-blue-400">.opt</span><span
+                                    class="text-yellow-400">.lazyredraw</span> = <span
+                                    class="text-purple-400">true</span></div>
+                            <div class="text-green-400">vim<span class="text-blue-400">.opt</span><span
+                                    class="text-yellow-400">.relativenumber</span> = <span
+                                    class="text-purple-400">true</span></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <!-- About Section -->
         <section id="about" class="section">
             <div class="container mx-auto px-6">
@@ -113,12 +164,15 @@
                             Passionate about <span>Performance</span> & Developer Experience
                         </h2>
                         <p class="about-description">
-                           I’m Bagus, a backend developer currently learning AI and Machine Learning. I use AI tools to speed up website development and enhance feature creation.
+                            I’m Bagus, a backend developer currently learning AI and Machine Learning. I use AI tools to
+                            speed up website development and enhance feature creation.
                         </p>
                         <p class="about-description">
-                            Outside of tech, I stay active in organizations, study psychology, and run a small online business. I’m disciplined, consistent, and structured—qualities that help me execute projects quickly and clearly
+                            Outside of tech, I stay active in organizations, study psychology, and run a small online
+                            business. I’m disciplined, consistent, and structured—qualities that help me execute
+                            projects quickly and clearly
                         </p>
-                        
+
                         <!-- Stats Inline -->
                         <div class="about-stats-inline">
                             <div class="stat-item">
@@ -135,23 +189,17 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Right Side: Avatar with Neon Gradient -->
                     <div class="about-avatar fade-in">
                         <div class="avatar-container">
                             <!-- Glow Effect Behind -->
                             <div class="avatar-glow"></div>
-                            
+
                             <!-- Gradient Ring -->
                             <div class="avatar-ring">
                                 <div class="avatar-inner">
-                                    <!-- Replace with your photo -->
-                                    <!-- <img src="your-photo.jpg" alt="ThePrimeagen"> -->
-                                    <div class="avatar-placeholder">
-                                        <svg fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                                        </svg>
-                                    </div>
+                                    <img src="avatar.png" alt="Bagus Ardin - Developer">
                                 </div>
                             </div>
                         </div>
@@ -159,7 +207,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Skills Section -->
         <section id="skills" class="section">
             <div class="container mx-auto px-6">
@@ -170,14 +218,15 @@
                         What I <span>Work With</span>
                     </h2>
                 </div>
-                
+
                 <!-- Skills Grid -->
                 <div class="skills-grid">
                     <!-- Languages Card -->
                     <div class="skill-card fade-in">
                         <div class="skill-card-header">
                             <svg class="skill-card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                             </svg>
                             <h3 class="skill-card-title">Languages</h3>
                         </div>
@@ -192,13 +241,15 @@
                             <span class="skill-pill">Dart</span>
                         </div>
                     </div>
-                    
+
                     <!-- Tools & Frameworks Card -->
                     <div class="skill-card fade-in">
                         <div class="skill-card-header">
                             <svg class="skill-card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
                             <h3 class="skill-card-title">Tools & Frameworks</h3>
                         </div>
@@ -213,12 +264,13 @@
                             <span class="skill-pill">Dart/Flutter</span>
                         </div>
                     </div>
-                    
+
                     <!-- Performance Card -->
                     <div class="skill-card fade-in">
                         <div class="skill-card-header">
                             <svg class="skill-card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
                             </svg>
                             <h3 class="skill-card-title">Performance</h3>
                         </div>
@@ -231,12 +283,13 @@
                             <span class="skill-pill">CPU Caching</span>
                         </div>
                     </div>
-                    
+
                     <!-- Teaching Card (Full Width) -->
                     <div class="skill-card full-width fade-in">
                         <div class="skill-card-header">
                             <svg class="skill-card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                             </svg>
                             <h3 class="skill-card-title">Teaching</h3>
                         </div>
@@ -251,7 +304,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Projects Section -->
         <section id="projects" class="section">
             <div class="container mx-auto px-6">
@@ -262,31 +315,36 @@
                         Things I've <span>Built</span>
                     </h2>
                 </div>
-                
+
                 <!-- Projects Grid -->
                 <div class="projects-grid">
                     <!-- Harpoon -->
                     <div class="project-card-v2 fade-in">
                         <div class="project-card-header">
                             <svg class="project-folder-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
                             </svg>
                             <div class="project-links">
-                                <a href="https://github.com/ThePrimeagen/harpoon" target="_blank" rel="noopener noreferrer" title="GitHub">
+                                <a href="https://github.com/ThePrimeagen/harpoon" target="_blank"
+                                    rel="noopener noreferrer" title="GitHub">
                                     <svg class="project-link-icon" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        <path
+                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                     </svg>
                                 </a>
                                 <a href="#" target="_blank" rel="noopener noreferrer" title="External Link">
-                                    <svg class="project-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    <svg class="project-link-icon" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                     </svg>
                                 </a>
                             </div>
                         </div>
                         <h3 class="project-card-title">Harpoon</h3>
                         <p class="project-card-description">
-                            A NeoVim plugin for lightning-fast file navigation. Navigate to any file in your project 
+                            A NeoVim plugin for lightning-fast file navigation. Navigate to any file in your project
                             with just a few keystrokes.
                         </p>
                         <div class="project-card-tags">
@@ -295,29 +353,34 @@
                             <span class="project-tag">Plugin</span>
                         </div>
                     </div>
-                    
+
                     <!-- Deez Interpreter -->
                     <div class="project-card-v2 fade-in">
                         <div class="project-card-header">
                             <svg class="project-folder-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
                             </svg>
                             <div class="project-links">
-                                <a href="https://github.com/ThePrimeagen" target="_blank" rel="noopener noreferrer" title="GitHub">
+                                <a href="https://github.com/ThePrimeagen" target="_blank" rel="noopener noreferrer"
+                                    title="GitHub">
                                     <svg class="project-link-icon" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        <path
+                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                     </svg>
                                 </a>
                                 <a href="#" target="_blank" rel="noopener noreferrer" title="External Link">
-                                    <svg class="project-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    <svg class="project-link-icon" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                     </svg>
                                 </a>
                             </div>
                         </div>
                         <h3 class="project-card-title">Deez Interpreter</h3>
                         <p class="project-card-description">
-                            A programming language interpreter implemented in TypeScript, Rust, and Zig. 
+                            A programming language interpreter implemented in TypeScript, Rust, and Zig.
                             Educational project for language design.
                         </p>
                         <div class="project-card-tags">
@@ -326,29 +389,34 @@
                             <span class="project-tag">Zig</span>
                         </div>
                     </div>
-                    
+
                     <!-- Vim With Me -->
                     <div class="project-card-v2 fade-in">
                         <div class="project-card-header">
                             <svg class="project-folder-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
                             </svg>
                             <div class="project-links">
-                                <a href="https://github.com/ThePrimeagen" target="_blank" rel="noopener noreferrer" title="GitHub">
+                                <a href="https://github.com/ThePrimeagen" target="_blank" rel="noopener noreferrer"
+                                    title="GitHub">
                                     <svg class="project-link-icon" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        <path
+                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                     </svg>
                                 </a>
                                 <a href="#" target="_blank" rel="noopener noreferrer" title="External Link">
-                                    <svg class="project-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    <svg class="project-link-icon" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                     </svg>
                                 </a>
                             </div>
                         </div>
                         <h3 class="project-card-title">Vim With Me</h3>
                         <p class="project-card-description">
-                            A streaming overlay system for live coding sessions. Real-time code sharing and 
+                            A streaming overlay system for live coding sessions. Real-time code sharing and
                             audience interaction.
                         </p>
                         <div class="project-card-tags">
@@ -357,25 +425,176 @@
                             <span class="project-tag">React</span>
                         </div>
                     </div>
+        </section>
+
+        <!-- Experience Timeline Section -->
+        <section id="experience" class="section">
+            <div class="container mx-auto px-6">
+                <div class="mb-12 fade-in">
+                    <p class="timeline-section-title">04. Experience & Education</p>
+                    <h2 class="timeline-heading">
+                        My <span>Journey</span>
+                    </h2>
+                </div>
+
+                <div class="timeline">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2024 - Present</span>
+                            <h3 class="timeline-title">AI & Machine Learning Student</h3>
+                            <p class="timeline-company">Self-learning & Online Courses</p>
+                            <p class="timeline-description">
+                                Actively learning AI/ML concepts, implementing models, and using AI tools to accelerate
+                                development workflows.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2023 - Present</span>
+                            <h3 class="timeline-title">Backend Developer</h3>
+                            <p class="timeline-company">Freelance & Projects</p>
+                            <p class="timeline-description">
+                                Building web applications with Laravel, Express.js, and PHP. Focus on API development,
+                                database design, and system optimization.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2021 - Present</span>
+                            <h3 class="timeline-title">Computer Science Student</h3>
+                            <p class="timeline-company">University</p>
+                            <p class="timeline-description">
+                                Studying computer science fundamentals, data structures, algorithms, and software
+                                engineering practices.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 4 -->
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2020 - 2021</span>
+                            <h3 class="timeline-title">Started Programming Journey</h3>
+                            <p class="timeline-company">Self-taught</p>
+                            <p class="timeline-description">
+                                Began learning programming with Python and web development. Built first projects and
+                                discovered passion for backend development.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="section">
+            <div class="container mx-auto px-6">
+                <div class="mb-12 fade-in text-center">
+                    <p class="testimonials-section-title">05. Testimonials</p>
+                    <h2 class="testimonials-heading">
+                        What People <span>Say</span>
+                    </h2>
+                </div>
+
+                <div class="testimonials-grid">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card fade-in">
+                        <div class="testimonial-quote">
+                            <svg fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                            </svg>
+                        </div>
+                        <p class="testimonial-text">
+                            "Bagus is an excellent developer with a strong work ethic. His attention to detail and
+                            problem-solving skills are impressive. Highly recommended!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">
+                                <span>AP</span>
+                            </div>
+                            <div class="testimonial-info">
+                                <h4>Anonymous Peer</h4>
+                                <p>Fellow Developer</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card fade-in">
+                        <div class="testimonial-quote">
+                            <svg fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                            </svg>
+                        </div>
+                        <p class="testimonial-text">
+                            "Working with Bagus was a great experience. He's disciplined, consistent, and always
+                            delivers quality work on time. A true professional!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">
+                                <span>TM</span>
+                            </div>
+                            <div class="testimonial-info">
+                                <h4>Team Member</h4>
+                                <p>Project Collaborator</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card fade-in">
+                        <div class="testimonial-quote">
+                            <svg fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                            </svg>
+                        </div>
+                        <p class="testimonial-text">
+                            "Bagus helped me understand complex programming concepts. He's patient, knowledgeable, and
+                            always willing to help. Great mentor!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">
+                                <span>JS</span>
+                            </div>
+                            <div class="testimonial-info">
+                                <h4>Junior Student</h4>
+                                <p>Mentee</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
         <section id="contact" class="section">
             <div class="container mx-auto px-6">
                 <!-- Section Header -->
                 <div class="mb-12 fade-in">
-                    <p class="contact-section-title">04. What's Next?</p>
+                    <p class="contact-section-title">06. What's Next?</p>
                     <h2 class="contact-heading">
                         Get In <span>Touch</span>
                     </h2>
                     <p class="contact-description">
-                        I'm always interested in collaborating on interesting projects, speaking at events, 
+                        I'm always interested in collaborating on interesting projects, speaking at events,
                         or helping developers level up their skills. Feel free to reach out!
                     </p>
                 </div>
-                
+
                 <!-- Contact Grid -->
                 <div class="contact-container">
                     <!-- Left: Contact Info -->
@@ -384,67 +603,80 @@
                         <div class="contact-card">
                             <div class="contact-card-header">
                                 <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                 </svg>
                                 <span class="contact-card-title">Email</span>
                             </div>
                             <p class="contact-card-value">
-                                <a href="mailto:hello@theprimeagen.com">hello@theprimeagen.com</a>
+                                <a href="mailto:bagusardin25@gmail.com">bagusardin25@gmail.com</a>
                             </p>
                         </div>
-                        
+
                         <!-- Location Card -->
                         <div class="contact-card">
                             <div class="contact-card-header">
                                 <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                 </svg>
                                 <span class="contact-card-title">Location</span>
                             </div>
                             <p class="contact-card-value">Somewhere in the cloud</p>
                         </div>
-                        
+
                         <!-- Social Links -->
                         <div class="social-links-grid">
-                            <a href="https://twitch.tv/theprimeagen" target="_blank" rel="noopener noreferrer" class="social-link-card" title="Twitch">
+                            <a href="https://github.com/bagusardin25" target="_blank" rel="noopener noreferrer"
+                                class="social-link-card" title="GitHub">
                                 <svg fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/>
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                 </svg>
                             </a>
-                            <a href="https://youtube.com/@ThePrimeagen" target="_blank" rel="noopener noreferrer" class="social-link-card" title="YouTube">
+                            <a href="https://linkedin.com/in/bagusardin" target="_blank" rel="noopener noreferrer"
+                                class="social-link-card" title="LinkedIn">
                                 <svg fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                                 </svg>
                             </a>
-                            <a href="https://github.com/ThePrimeagen" target="_blank" rel="noopener noreferrer" class="social-link-card" title="GitHub">
+                            <a href="https://instagram.com/bagusardin" target="_blank" rel="noopener noreferrer"
+                                class="social-link-card" title="Instagram">
                                 <svg fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                                 </svg>
                             </a>
-                            <a href="https://twitter.com/ThePrimeagen" target="_blank" rel="noopener noreferrer" class="social-link-card" title="Twitter">
-                                <svg fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            <a href="mailto:bagusardin25@gmail.com" class="social-link-card" title="Email">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                 </svg>
                             </a>
                         </div>
                     </div>
-                    
+
                     <!-- Right: Contact Form -->
                     <div class="contact-form-card fade-in">
                         <h3 class="contact-form-title">Send a Message</h3>
                         <form class="contact-form" id="contact-form" aria-label="Contact form">
                             <div class="form-group">
                                 <label for="name" class="form-label">Name</label>
-                                <input type="text" id="name" name="name" placeholder="Your name" required class="form-input">
+                                <input type="text" id="name" name="name" placeholder="Your name" required
+                                    class="form-input">
                             </div>
                             <div class="form-group">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" id="email" name="email" placeholder="your@email.com" required class="form-input">
+                                <input type="email" id="email" name="email" placeholder="your@email.com" required
+                                    class="form-input">
                             </div>
                             <div class="form-group">
                                 <label for="message" class="form-label">Message</label>
-                                <textarea id="message" name="message" placeholder="Your message..." rows="4" required class="form-textarea"></textarea>
+                                <textarea id="message" name="message" placeholder="Your message..." rows="4" required
+                                    class="form-textarea"></textarea>
                             </div>
                             <button type="submit" class="form-submit">Send Message</button>
                         </form>
@@ -453,14 +685,22 @@
             </div>
         </section>
     </div>
-    
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
     <!-- Footer -->
     <footer class="bg-black py-8">
         <div class="container mx-auto px-6 text-center">
-            <p class="text-gray-400">© 2025 Bagus. Built with performance in mind.</p>
+            <p class="text-gray-400">© 2026 Bagus Ardin. Built with ❤️ and performance in mind.</p>
         </div>
     </footer>
-    
+
     <script src="js/main.js"></script>
 </body>
+
 </html>
